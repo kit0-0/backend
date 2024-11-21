@@ -7,4 +7,11 @@ var con = mysql.createConnection({
     database: "dummy"
 });
 
+con.connect((err)=>{
+    if(err)
+    {
+        console.warn("error in connection");
+    }
+});
+
 module.exports = con;
